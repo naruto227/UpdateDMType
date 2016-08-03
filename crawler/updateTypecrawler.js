@@ -44,7 +44,7 @@ myEvents.on('getRoomId', function (roomid) {
         "_chat_2016_08_03 SET type='1' WHERE `type`='gift';";
     conn.query(sql1+sql2, function (err) {
         if (err) {
-            conn.end();
+            // conn.end();
             return console.log(err + "ingkee sql2");
         }
     });
