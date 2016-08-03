@@ -39,9 +39,9 @@ exports.updateType = function () {
 myEvents.on('getRoomId', function (roomid) {
     console.log('你大爷的：' + roomid);
     var sql1 = "UPDATE ingkee_" +roomid+
-        "_chat_2016_08_03 SET type='0' WHERE `type` LIKE 'message';";
+        "_chat_2016_08_03 SET type='0' WHERE `type`='message';";
     var sql2 = "UPDATE ingkee_" +roomid+
-        "_chat_2016_08_03 SET type='1' WHERE `type` LIKE 'gift';";
+        "_chat_2016_08_03 SET type='1' WHERE `type`='gift';";
     conn.query(sql1+sql2, function (err) {
         if (err) {
             conn.end();
