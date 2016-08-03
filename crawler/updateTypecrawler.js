@@ -12,7 +12,7 @@ var start = 1,
     isFinish = false;
 exports.updateType = function () {
     // var limit_range = (start - 1) * 10 + ',' + 10;
-    var sql = 'SELECT * FROM chat_ingkee_2016_08_03'+';';// + limit_range +
+    var sql = 'SELECT * FROM chat_ingkee_2016_08_03;';// + limit_range +
     conn.query(sql, function (err, rows) {
         if (err) {
             conn.end();
@@ -40,20 +40,20 @@ myEvents.on('getRoomId', function (roomid) {
     console.log('你大爷的：' + roomid);
     var sql1 = "UPDATE ingkee_" +roomid+
         "_chat_2016_08_03 SET type='0' WHERE `type` LIKE 'message';";
-    /*var sql2 = "UPDATE ingkee_" +roomid+
-        "_chat_2016_08_03 SET type='1' WHERE `type` LIKE 'gift';";*/
+    var sql2 = "UPDATE ingkee_" +roomid+
+        "_chat_2016_08_03 SET type='1' WHERE `type` LIKE 'gift';";
     conn.query(sql1, function (err) {
         if (err) {
             conn.end();
             return console.log(err + "ingkee sql2");
         }
     });
-    /*conn.query(sql2, function (err) {
+    conn.query(sql2, function (err) {
         if (err) {
             conn.end();
             return console.log(err + "ingkee sql3");
         }
-    });*/
+    });
 });
 
 /*
