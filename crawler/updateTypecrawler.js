@@ -12,7 +12,7 @@ var start = 1,
     isFinish = false;
 exports.updateType = function () {
     // var limit_range = (start - 1) * 10 + ',' + 10;
-    var sql = 'SELECT * FROM chat_ingkee_2016_08_03 limit'+';';// + limit_range +
+    var sql = 'SELECT * FROM chat_ingkee_2016_08_03'+';';// + limit_range +
     conn.query(sql, function (err, rows) {
         if (err) {
             conn.end();
