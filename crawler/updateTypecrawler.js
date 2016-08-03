@@ -42,18 +42,19 @@ myEvents.on('getRoomId', function (roomid) {
         "_chat_2016_08_03 SET type='0' WHERE `type`='message';";
     var sql2 = "UPDATE ingkee_" +roomid+
         "_chat_2016_08_03 SET type='1' WHERE `type`='gift';";
-    conn.query(sql1+sql2, function (err) {
-        if (err) {
-            // conn.end();
-            return console.log(err + "ingkee sql2");
-        }
-    });
+    // conn.query(sql1+sql2, function (err) {
+    //     if (err) {
+    //         // conn.end();
+    //         return console.log(err + "ingkee sql2");
+    //     }
+    // });
     // conn.query(sql2, function (err) {
     //     if (err) {
     //         conn.end();
     //         return console.log(err + "ingkee sql3");
     //     }
     // });
+    console.log(sql1+sql2);
 });
 
 /*
